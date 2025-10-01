@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gender-Automat</title>
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>.navbar-nav {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .navbar-nav {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+</style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!--Header-->
+  <header class="text-white text-center p-3" style="background-color: #007BFF;">
+    <h1>Gender-Automat</h1>
+    <p class="lead">Texte automatisch gendern</p>
+  </header>
+
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Gender-Automat</a>
+      <div class="navbar-nav">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#texte">Texte</a>
+        <a class="nav-link" href="#about">Über</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--Hauptinhalte-->
+  <main class="container my-4 flex-grow-1">
+    <!--Home-Abschnitt-->
+    <section id="home">
+      <h2>Willkommen</h2>
+      <p>Diese Seite zeigt, wie Texte automatisch gendergerecht umgeschrieben werden können.</p>
+    </section>
+
+    <!--Texte-Abschnitt-->
+    <section id="texte" class="mt-5">
+      <h2>Beispieltexte</h2>
+
+      <div class="mb-3">
+        <p id="text1">
+          Der Mitarbeiter hat die Aufgabe, den Kunden bei Problemen zu helfen.
+          Jeder Mitarbeiter muss regelmäßig an Schulungen teilnehmen.
+          Der Ingenieur unterstützt den Mitarbeiter dabei, wenn es technische Fragen gibt.
+        </p>
+        <button class="btn btn-primary" onclick="genderText('text1')">Gendern</button>
+        <button class="btn btn-secondary" onclick="resetText('text1')">Zurücksetzen</button>
+      </div>
+
+      <div class="mb-3">
+        <p id="text2">
+          Ein Lehrer erklärt den Schülern die neuen Inhalte. Der Lehrer bereitet die Unterrichtsmaterialien vor und hilft den Schülern bei Schwierigkeiten. Jeder Lehrer ist verpflichtet, die Schüler regelmäßig zu bewerten.
+        </p>
+        <button class="btn btn-primary" onclick="genderText('text2')">Gendern</button>
+        <button class="btn btn-secondary" onclick="resetText('text2')">Zurücksetzen</button>
+      </div>
+
+      <div class="mb-3">
+        <p id="text3">
+          Der Entwickler programmiert neue Funktionen und testet diese mit anderen Kollegen. Der Administrator sorgt dafür, dass die Systeme stabil laufen. Wenn ein Mitarbeiter ein Problem meldet, kümmert sich der Administrator sofort darum.
+        </p>
+        <button class="btn btn-primary" onclick="genderText('text3')">Gendern</button>
+        <button class="btn btn-secondary" onclick="resetText('text3')">Zurücksetzen</button>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer id="about" class="text-white text-center p-2 mt-auto" style="background-color: #333;">
+    <small>&copy; 2025 Gender-Automat – erstellt im Rahmen der Fallstudie</small>
+  </footer>
+
+  <!--Skript-->
+  <script src="gendering.js"></script>
+</body>
+</html>
