@@ -75,6 +75,17 @@ html[dir="rtl"] .navbar-nav {
         <button class="btn btn-primary" onclick="genderText('text3')">Gendern</button>
         <button class="btn btn-secondary" onclick="resetText('text3')">Zurücksetzen</button>
       </div>
+        <div class="mb-3">
+          <p id="testhack">
+            &lt;script&gt;alert('Hacked!')&lt;/script&gt;
+            &lt;img src=x onerror=alert('XSS')&gt;
+            &lt;b&gt;Bösartiger Test&lt;/b&gt;
+          </p>
+          <button class="btn btn-primary"
+            onclick="genderText('testhack')">Gendern</button>
+          <button class="btn btn-secondary"
+            onclick="resetText('testhack')">Zurücksetzen</button>
+        </div>      
     </section>
   </main>
 
@@ -87,3 +98,4 @@ html[dir="rtl"] .navbar-nav {
   <script src="gendering.js"></script>
 </body>
 </html>
+
